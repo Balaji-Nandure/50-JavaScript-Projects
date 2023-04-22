@@ -51,8 +51,8 @@ body {
 .panel.active h3 {
     opacity: 1;
 
-    /* animate */
-    transition: all 0.3s ease-in;
+    /* here 0.4 seconds is a delay */
+    transition: all 0.3s ease-in 0.4s;
 }
 
 /* when screen is very small show only 3 cards instead of 5 */
