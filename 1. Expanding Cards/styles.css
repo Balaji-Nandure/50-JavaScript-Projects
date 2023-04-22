@@ -14,3 +14,55 @@ body {
     overflow: hidden;
     margin: 0;
 }
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px;
+    position: relative;
+    transition: all 0.3s ease-in;
+}
+
+.panel h3 {
+    font-style: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+/* targets elements with both the classes "panel" and "active" */
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+
+    /* animate */
+    transition: all 0.3s ease-in;
+}
+
+/* when screen is very small show only 3 cards instead of 5 */
+@media (max-width: 480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
