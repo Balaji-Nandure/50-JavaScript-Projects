@@ -1,0 +1,55 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh;
+    overflow: hidden; */
+    margin: 0;
+
+    /* Apart from starter files */
+    background-color: #6c9bcf;
+
+    /* I dont want to show scroll bar in x direction */
+    overflow-x: hidden;
+}
+
+h2 {
+    margin: 10px;
+}
+
+.box {
+    background-color: #f97b22;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 200px;
+    max-width: 90vw;
+    width: 500px;
+
+    margin: 10px;
+    border-radius: 15px;
+
+    /* for animation */
+    transform: translateX(400%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+    transform: translateX(-400%);
+}
+
+.box.show {
+    transform: translateX(0%);
+}
